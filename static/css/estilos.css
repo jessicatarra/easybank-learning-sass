@@ -3,6 +3,9 @@
   padding: 1em 0;
   justify-content: space-between;
   position: relative;
+  z-index: 3;
+  width: 100%;
+  background: white;
 }
 .header__logo {
   align-self: center;
@@ -40,6 +43,9 @@
   background-size: 345px, cover;
   margin-bottom: 1.2em;
 }
+.hero__imageSrc {
+  display: none;
+}
 @media screen and (min-width: 768px) {
   .hero {
     text-align: left;
@@ -50,21 +56,16 @@
   }
   .hero__content {
     position: relative;
-    border: 1px solid red;
     display: grid;
     min-height: 550px;
     align-items: center;
     grid-template-areas: "description image";
     grid-template-columns: 370px 1fr;
   }
-  .hero__description {
-    border: 1px solid green;
-  }
   .hero__image {
     grid-area: image;
     min-height: inherit;
     position: absolute;
-    border: 1px solid purple;
     width: 500px;
     left: 0;
     top: 0;
@@ -74,9 +75,13 @@
   }
 }
 @media screen and (min-width: 1024px) {
+  .hero__imageSrc {
+    display: block;
+    position: relative;
+    top: -150px;
+  }
   .hero__image {
-    background: url("../images/image-mockups.png") right -100px bottom no-repeat;
-    background-size: 100%;
+    background: none;
     left: 150px;
     right: 0;
     top: 0;
@@ -162,7 +167,6 @@
 @media screen and (min-width: 768px) {
   .why {
     text-align: left;
-    border: 2px solid red;
   }
   .why .__grid {
     display: grid;
