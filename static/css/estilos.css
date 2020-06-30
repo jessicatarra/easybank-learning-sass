@@ -157,6 +157,7 @@
 }
 .why .copy {
   margin-bottom: 4em;
+  font-size: 1em;
 }
 .why__item .copy {
   margin-bottom: 2em;
@@ -307,6 +308,7 @@ body {
   font-family: "Public Sans", sans-serif;
   margin: 0;
   color: var(--grayBlue);
+  overflow-x: hidden;
 }
 
 .copy {
